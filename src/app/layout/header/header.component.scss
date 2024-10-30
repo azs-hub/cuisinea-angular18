@@ -1,0 +1,64 @@
+.navbar {
+  @apply flex align-middle justify-between p-8 bg-cuisinea-50;
+
+  &__logo {
+    
+  }
+  
+  &__links {
+    @apply flex gap-8 flex-1 justify-center; 
+  }
+  
+  &__link {
+    @apply transition-colors text-cuisinea-900 font-bold;
+
+    &:hover {
+      @apply text-cuisinea-600;
+    }
+  }
+
+  &__login-btn {
+    @apply px-4 py-2;
+  }
+
+  &__dropdown-button {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #f0f0f0; /* Change background on hover */
+    }
+  }
+
+  .dropdown {
+    display: block; /* Display block for dropdown */
+    position: absolute; /* Position it below the parent */
+    left: 0;
+    top: 100%; /* Align to the bottom of the parent */
+    background-color: white; /* Background color for dropdown */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-radius: 4px; /* Optional: rounded corners */
+  }
+  
+  .dropdown li {
+    padding: 8px 15px; /* Padding for dropdown items */
+  }
+  
+  .dropdown li a {
+    color: #333; /* Text color for dropdown links */
+    text-decoration: none; /* No underline */
+  }
+  
+  .dropdown li a:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+  }
+}

@@ -1,0 +1,38 @@
+.home-banner {
+  @apply mx-auto py-40 z-10 relative;
+
+  &__title {
+    @apply mb-5 text-3xl font-black text-center;
+  }
+
+  &-categories {
+    &__item {
+      @apply inline-block mr-3;
+
+      button {
+        @apply py-1 px-4 border-red-900 border-2 rounded-full;
+
+        &:hover,
+        &.selected {
+          @apply bg-red-900 text-white border-red-900 border-2;
+        }
+      }
+    }
+  }
+}
+.banner-line {
+  @apply absolute left-0 stroke-red-900 z-0;
+  bottom: -1px;
+  width: 100%;
+}
+.banner-tomato {
+  @apply absolute right-1/4 bottom-1/4 z-0;
+}
+.banner-carrot {
+  @apply absolute top-1/4 right-1/4 z-0;
+  width: 300px;
+}
+.banner-cabbage {
+  @apply absolute top-1/4 left-1/4 z-0;
+  width: 300px;
+}

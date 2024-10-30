@@ -1,0 +1,25 @@
+<header class="navbar" data-testid="navbar">
+  <div class="navbar__logo">MyLogo</div>
+  <nav class="navbar__links">
+    <!-- @for (link of navigation; track link.label) {
+    <a href="{{link.label}}" class="navbar__link">{{link.label}}</a>
+    } -->
+    <!-- <a href="#" class="navbar__link">About</a>
+    <a href="#" class="navbar__link">Services</a>
+    <a href="#" class="navbar__link">Contact</a> -->
+    <ul>
+      <li *ngFor="let item of navigation" class="navbar__link">
+        <!-- <a *ngIf="!item.items" [routerLink]="item.path">{{ item.label }}</a> -->
+        <div *ngIf="item.items" (mouseenter)="isDropdownOpen = true" (mouseleave)="isDropdownOpen = false" class="navbar__dropdown-button">
+          <span>{{ item.label }}</span>
+          <ul class="dropdown" *ngIf="isDropdownOpen" @dropdownAnimation>
+            <li *ngFor="let subItem of item.items">
+              <!-- <a [routerLink]="subItem.path">{{ subItem.label }}</a> -->
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <button class="navbar__login-btn">Login</button>
+</header>
